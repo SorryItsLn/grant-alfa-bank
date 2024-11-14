@@ -11,19 +11,36 @@ const Contacts = () => {
     ["Новосибирск", "+7 (383) 322-53-62"],
     ["Казань", "+7 (843) 599-52-05"],
     ["Волгоград", "+7 (844) 245-98-80"],
+    ["Общий", "+8 (800) 775-34-60"],
   ]);
   return (
-    <div>
+    <div className="my-12 w-full">
       <div>
-        {[...numbers].map((el) => {
-          return (
-            <div key={el}>
-              <span>
-                {el[0]} {el[1]}
-              </span>
-            </div>
-          );
-        })}
+        <h1 className="text-6xl">Контакты</h1>
+      </div>
+      <div className="mt-6">
+        <div>
+          <span className="text-xl">
+            С нами можно связаться позвонив по одному из региональных номеров
+            телефона:
+          </span>
+        </div>
+        <div className="mt-3 flex justify-start flex-wrap gap-4">
+          {[...numbers].map((el) => {
+            return (
+              <a
+                className="flex hover:bg-white/30  cursor-pointer  hover:scale-[1.06]  flex-col items-start p-2 bg-white/15  backdrop-blur rounded-md duration-500 shadow-md"
+                key={el}
+                href={"tel:" + el[1]}
+              >
+                <div>
+                  <span className="font-bold "> {el[0]} </span>
+                </div>
+                <span>{el[1]}</span>
+              </a>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
