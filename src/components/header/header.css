@@ -1,0 +1,25 @@
+.gouda {
+  background: linear-gradient(
+    90deg,
+    #1f40f813,
+    #9c9c9c2c,
+    #23a5d517,
+    #bb95f715
+  );
+
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
