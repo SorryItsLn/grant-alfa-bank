@@ -9,8 +9,8 @@ import { default as zvonobot1 } from "./images/1.svg";
 
 function App() {
   return (
-    <div className="rounded-xl relative -z-50 flex  justify-center bg-gradient-to-r from-gray-400 to-gray-700 m-2">
-      <section className="w-10/12   mt-4 p-4 rounded-xl flex flex-col gap-4 justify-center items-center ">
+    <div className="rounded-xl   flex  justify-center bg-gradient-to-r from-gray-400 to-gray-700 m-2">
+      <section className=" w-10/12   mt-4 p-4 rounded-xl flex flex-col gap-4 justify-center items-center ">
         <HeaderComponent />
         <div className="bg-gradient-to-r from-white/30 to-transparent h-[1px] w-full" />
         <div className="flex justify-center">
@@ -27,7 +27,7 @@ function App() {
         <div className="bg-gradient-to-r from-white/30 to-transparent h-[1px] w-full" />
         <div className="flex">
           <Contacts />
-          <img className="-z-10 " src={zvonobot1} width={"330px"} alt="" />
+          <img className=" " src={zvonobot1} width={"330px"} alt="" />
         </div>
       </section>
     </div>
