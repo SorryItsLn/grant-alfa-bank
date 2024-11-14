@@ -26,20 +26,31 @@ const Contacts = () => {
           </span>
         </div>
         <div className="mt-3 flex justify-start flex-wrap gap-4">
-          {[...numbers].map((el) => {
-            return (
-              <a
-                className="flex hover:bg-white/30  cursor-pointer  hover:scale-[1.06]  flex-col items-start p-2 bg-white/15  backdrop-blur rounded-md duration-500 shadow-md"
-                key={el}
-                href={"tel:" + el[1]}
-              >
-                <div>
-                  <span className="font-bold "> {el[0]} </span>
-                </div>
-                <span>{el[1]}</span>
-              </a>
-            );
-          })}
+          <a
+            className="flex hover:bg-white/30  cursor-pointer  hover:scale-[1.06]  flex-col items-start p-2 bg-white/15  backdrop-blur rounded-md duration-500 shadow-md"
+            href="tel:8(800)775-34-60"
+          >
+            <div>
+              <span className="font-bold "> Общий </span>
+            </div>
+            <span>8(800)775-34-60</span>
+          </a>
+          {[...numbers]
+            .sort((a, b) => a[0].localeCompare(b[0]))
+            .map((el) => {
+              return (
+                <a
+                  className="flex hover:bg-white/30  cursor-pointer  hover:scale-[1.06]  flex-col items-start p-2 bg-white/15  backdrop-blur rounded-md duration-500 shadow-md"
+                  key={el}
+                  href={"tel:" + el[1]}
+                >
+                  <div>
+                    <span className="font-bold "> {el[0]} </span>
+                  </div>
+                  <span>{el[1]}</span>
+                </a>
+              );
+            })}
         </div>
       </div>
     </div>
